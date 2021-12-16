@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#landing-page {
+    background-image: url(../vendors/images/background.png);
+    height: 100vh;
+    position: relative;
+}
+
+#global-top-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#global-bot-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#background-light {
+    z-index: 2;
+    position: absolute;
+}
+
+#section1 {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#banner {
+    width: 50%;
+    position: relative;
+}
+
+img#image-banner {
+    width: 100%;
+    position: absolute;
+}
+
+img#frame-image {
+    width: 100%;
+    position: absolute;
+}
+
+div#header {
+    height: 120px;
+}
