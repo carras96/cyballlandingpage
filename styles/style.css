@@ -5,8 +5,15 @@
 
 #landing-page {
     background-image: url(../vendors/images/background.png);
-    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: initial;
+    background-position: center;
+    height: 5000px;
     position: relative;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+    flex-direction: column;
 }
 
 #global-top-right {
@@ -35,10 +42,11 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 #banner {
-    width: 50%;
+    width: 100%;
     position: relative;
 }
 
@@ -53,5 +61,55 @@ img#frame-image {
 }
 
 div#header {
-    height: 120px;
+    height: 100px;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.menu-item {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: Orbitron;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+div#menu {
+    width: calc(100% - 250px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div#hero-image-block {
+    width: auto;
+    position: relative;
+    top: 430px;
+    display: flex;
+    justify-content: center;
+    z-index: 4;
+}
+
+div#hero-ground-block {
+    position: relative;
+    width: 50%;
+}
+
+img#ground-line {
+    position: absolute;
+    top: 0;
+}
+
+img#ground-light {
+    position: absolute;
+    top: 0;
+}
+
+div#main-content {
+    width: 50%;
 }
