@@ -6,26 +6,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/slider.css">
+    <link rel="stylesheet" href="./styles/menu-mobile.css">
+    <link rel="stylesheet" href="./styles/animation.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Document</title>
 </head>
 
 <body>
     <main id="landing-page">
+        <div id="global-top">
+            <img src="./vendors/images/global-top.png" alt="">
+        </div>
         <div id="header">
             <a id="logo" href="#">
                 <img src="./vendors/images/logo.png" alt="">
             </a>
-            <div id="menu">
+            <div id="menu-none-mobile">
                 <a href="#CyBloc" class="menu-item">CyBlocs</a>
                 <a href="#Features" class="menu-item">Features</a>
                 <a href="#Ecosystem" class="menu-item">Ecosystem</a>
                 <a href="#Community" class="menu-item">Social</a>
                 <a href="https://docs.cyball.com/" target="_blank" class="menu-item">Docs</a>
-                <a href="https://genesis.cyball.com/" target="_blank" class="menu-item">Genesis</a>
+                <a href="https://genesis.cyball.com/" target="_blank" class="menu-item" id="genesis">Genesis</a>
+            </div>
+            <div id="menu-mobile">
+                <div class="navbar-header">
+                    <div class="toggle-button" id="toggle">
+                      <span class="bar top"></span>
+                      <span class="bar middle"></span>
+                      <span class="bar bottom"></span>
+                    </div>
+                  </div>
+                  
+                  <!-- markup for the overlay -->
+                <nav class="overlay" id="overlay">
+                  <ul>
+                    <li><a href="#CyBloc" class="menu-item">CyBlocs</a></li>
+                    <li><a href="#Features" class="menu-item">Features</a></li>
+                    <li><a href="#Ecosystem" class="menu-item">Ecosystem</a></li>
+                    <li><a href="#Community" class="menu-item">Social</a></li>
+                    <li><a href="https://docs.cyball.com/" target="_blank" class="menu-item">Docs</a></li>
+                    <li><a href="https://genesis.cyball.com/" target="_blank" class="menu-item">Genesis</a></li>
+                  </ul>
+                </nav>
             </div>
         </div>
         <div id="main-content">
             <div id="section1">
+                <video autoplay muted loop id="light1">
+                    <source src="./vendors/videos/light_1_VP9.webm" type="video/webm">
+                </video>
                 <div id="banner">
                     <!-- <img src="./vendors/images/banner2.png" alt="" id="image-banner"> -->
                     <div class="CSSgal">
@@ -35,25 +66,19 @@
                         <s id="s2"></s>
 
                         <div class="slider">
-                            <div style="background:#5b8;">
-                                <h2>PURE <b>CSS</b> SLIDESHOW</h2>
+                            <div>
+                                <img src="./vendors/images/banner1.png" alt="">
 
                             </div>
-                            <div style="background:#85b;">
-                                <h2>Slide 2</h2>
+                            <div>
+                                <img src="./vendors/images/banner2.png" alt="">
                             </div>
                         </div>
 
                         <div class="prevNext">
-                            <div><a href="#s4"></a><a href="#s2"></a></div>
-                            <div><a href="#s1"></a><a href="#s3"></a></div>
+                            <div><a class="prev" href="#s2"></a><a class="next" href="#s2"></a></div>
+                            <div><a class="prev" href="#s1"></a><a class="next" href="#s1"></a></div>
                         </div>
-
-                        <div class="bullets">
-                            <a href="#s1">1</a>
-                            <a href="#s2">2</a>
-                        </div>
-
                     </div>
                 </div>
                 <div id="hero-image-block">
@@ -66,7 +91,10 @@
                     </p>
                 </div>
             </div>
-            <div id="section2">
+            <div id="CyBloc" class="section">
+                <video autoplay muted loop id="light2">
+                    <source src="./vendors/videos/light_2_VP9.webm" type="video/webm">
+                </video>
                 <h3 class="header-section">What builds a CyBloc?</h3>
                 <div class="content">
                     <div class="cybloc-image">
@@ -84,11 +112,12 @@
                     </div>
                 </div>
             </div>
-            <div id="section3">
+            <div id="Features" class="section">
                 <h3 class="header-section">Game Features</h3>
                 <div class="content">
                     <div class="cybloc-image">
-                        <img src="./vendors/images/group-cards.png" alt="">
+                        <img id="card-desktop" src="./vendors/images/group-cards.png" alt="">
+                        <img id="card-mobile" src="./vendors/images/group-mobile.png" alt="">
                     </div>
                     <div class="detail">
                         <img id="image-text" src="./vendors/images/image-for-text.png" alt="">
@@ -96,39 +125,44 @@
                     </div>
                 </div>
             </div>
-            <div id="section4">
+            <div id="Ecosystem" class="section">
+                <video autoplay muted loop id="light3">
+                    <source src="./vendors/videos/light_3_VP9.webm" type="video/webm">
+                </video>
                 <h3 class="header-section">Ecosystem</h3>
-                <div class="content">
-                    <div class="detail-item">
-                        <img src="./vendors/images/image31.png" alt="">
+                <div class="wrap-content">
+                    <div class="content">
+                        <div class="detail-item">
+                            <img src="./vendors/images/image31.png" alt="">
+                        </div>
+                        <div class="detail-item" id="image-center">
+                            <img src="./vendors/images/image322.png" alt="">
+                        </div>
+                        <div class="detail-item">
+                            <img src="./vendors/images/image33.png" alt="">
+                        </div>
                     </div>
-                    <div class="detail-item" id="image-center">
-                        <img src="./vendors/images/image322.png" alt="">
-                    </div>
-                    <div class="detail-item">
-                        <img src="./vendors/images/image33.png" alt="">
-                    </div>
-                </div>
-                <div class="content-text">
-                    <div class="detail-item">
-                        <h4>Marketplace</h4>
-                        <p>Native NFT Marketplace for CyBall’s assets</p>
-                    </div>
-                    <div class="detail-item">
-                        <h4>CyLoans</h4>
-                        <p>Proprietary CyBlocs loaning system for automated scholar-ships</p>
-                    </div>
-                    <div class="detail-item">
-                        <h4>CyDex</h4>
-                        <p>Trade CyBall’s tokens right from our native interface</p>
+                    <div class="content-text">
+                        <div class="detail-item">
+                            <h4>Marketplace</h4>
+                            <p>Native NFT Marketplace for CyBall’s assets</p>
+                        </div>
+                        <div class="detail-item">
+                            <h4>CyLoans</h4>
+                            <p>Proprietary CyBlocs loaning system for automated scholar-ships</p>
+                        </div>
+                        <div class="detail-item">
+                            <h4>CyDex</h4>
+                            <p>Trade CyBall’s tokens right from our native interface</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div id="section5">
+            <div id="Community" class="section">
                 <h3 class="header-section">Backers</h3>
                 <img src="./vendors/images/backer1.png" alt="">
             </div>
-            <div id="section6">
+            <div id="section6" class="section">
                 <h3 class="header-section">Join our newsletter and socials!</h3>
                 <div id="form-email">
                     <div id="form-email-wrapper">
@@ -144,8 +178,38 @@
                 </div>
             </div>
         </div>
-        <div id="footer"></div>
+        <div id="footer">
+            <div id="copy-right">CyBall © 2021 All Rights Reserved</div>
+            <div id="social">
+                <a href="https://discord.gg/cyball" target="_blank" class="discord">
+                    <img src="./vendors/images/icon8.png" loading="lazy" alt="Discord" class="social-media-button">
+                </a>
+                <a href="https://t.me/cyballofficial" target="_blank" class="telegram">
+                    <img src="./vendors/images/icon1.png" loading="lazy" alt="Telegram" class="social-media-button">
+                </a>
+                <a href="https://twitter.com/CyBallOfficial" target="_blank" class="twitter">
+                    <img src="./vendors/images/icon2.png" loading="lazy" alt="Twitter" class="social-media-button">
+                </a>
+                <a href="https://blog.cyball.com/" target="_blank" class="medium">
+                    <img src="./vendors/images/icon3.png" loading="lazy" alt="Medium" class="social-media-button">
+                </a>
+                <a href="https://facebook.com/CyBall-CyBloc-Football-106965301692668" target="_blank" class="facebook">
+                    <img src="./vendors/images/icon4.png" loading="lazy" alt="Facebook" class="social-media-button">
+                </a>
+                <a href="https://instagram.com/cyballofficial" target="_blank" class="instagram">
+                    <img src="./vendors/images/icon5.png" loading="lazy" alt="Instagram" class="social-media-button">
+                </a>
+                <a href="mailto:contact@cyball.com" class="email">
+                    <img src="./vendors/images/icon6.png" loading="lazy" alt="Email" class="social-media-button">
+                </a>
+            </div>
+        </div>
+        <div id="global-bot">
+            <img src="./vendors/images/global-bot.png" alt="">
+        </div>
     </main>
 </body>
-
+<script src="./js/menu-mobile.js"></script>
+<script src="./js/scroll.js"></script>
+<script src="./js/animation.js"></script>
 </html>
