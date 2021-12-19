@@ -4,6 +4,7 @@ $(document).ready(function () {
   });
 
   $("#hide-trailer").click(function () {
+    $('iframe').attr('src', $('iframe').attr('src'));
     $("#video-trailer").css({ display: "none" });
   });
 });
