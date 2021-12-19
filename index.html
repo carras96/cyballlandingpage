@@ -15,6 +15,17 @@
 
 <body>
     <main id="landing-page">
+        <div id="video-trailer">
+            <iframe class="embedly-embed w-lightbox-embed"
+                src="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2F1g2d0P_VS2c%3Ffeature%3Doembed%26start%3D0%26modestbranding%3D1%26controls%3D1%26rel%3D0%26autoplay%3D1&amp;display_name=YouTube&amp;url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D1g2d0P_VS2c&amp;image=https%3A%2F%2Fi.ytimg.com%2Fvi%2F1g2d0P_VS2c%2Fhqdefault.jpg&amp;args=mute%3D0%7Cmodestbranding%3D1%7Ccontrols%3D1%7Cstart%3D0%7Crel%3D0%7Cautoplay%3D1&amp;key=96f1f04c5f4143bcb0f2e68c87d65feb&amp;autoplay=1&amp;type=text%2Fhtml&amp;schema=youtube"
+                width="940" height="528" scrolling="no" title="YouTube embed" frameborder="0"
+                allow="autoplay; fullscreen" allowfullscreen="true"></iframe>
+            <div class="toggle-button toggle-active" id="hide-trailer">
+                <span class="bar top"></span>
+                <span class="bar middle"></span>
+                <span class="bar bottom"></span>
+            </div>
+        </div>
         <div id="global-top">
             <img src="./vendors/images/global-top.png" alt="">
         </div>
@@ -33,22 +44,22 @@
             <div id="menu-mobile">
                 <div class="navbar-header">
                     <div class="toggle-button" id="toggle">
-                      <span class="bar top"></span>
-                      <span class="bar middle"></span>
-                      <span class="bar bottom"></span>
+                        <span class="bar top"></span>
+                        <span class="bar middle"></span>
+                        <span class="bar bottom"></span>
                     </div>
-                  </div>
-                  
-                  <!-- markup for the overlay -->
+                </div>
+
+                <!-- markup for the overlay -->
                 <nav class="overlay" id="overlay">
-                  <ul>
-                    <li><a href="#CyBloc" class="menu-item">CyBlocs</a></li>
-                    <li><a href="#Features" class="menu-item">Features</a></li>
-                    <li><a href="#Ecosystem" class="menu-item">Ecosystem</a></li>
-                    <li><a href="#Community" class="menu-item">Social</a></li>
-                    <li><a href="https://docs.cyball.com/" target="_blank" class="menu-item">Docs</a></li>
-                    <li><a href="https://genesis.cyball.com/" target="_blank" class="menu-item">Genesis</a></li>
-                  </ul>
+                    <ul>
+                        <li><a href="#CyBloc" class="menu-item">CyBlocs</a></li>
+                        <li><a href="#Features" class="menu-item">Features</a></li>
+                        <li><a href="#Ecosystem" class="menu-item">Ecosystem</a></li>
+                        <li><a href="#Community" class="menu-item">Social</a></li>
+                        <li><a href="https://docs.cyball.com/" target="_blank" class="menu-item">Docs</a></li>
+                        <li><a href="https://genesis.cyball.com/" target="_blank" class="menu-item">Genesis</a></li>
+                    </ul>
                 </nav>
             </div>
         </div>
@@ -212,4 +223,6 @@
 <script src="./js/menu-mobile.js"></script>
 <script src="./js/scroll.js"></script>
 <script src="./js/animation.js"></script>
+<script src="./js/click-trailer.js"></script>
+
 </html>

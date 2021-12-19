@@ -93,6 +93,23 @@ img#frame-image {
     /* position: absolute; */
 }
 
+span#hide-trailer {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#video-trailer {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 12;
+    background-color: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}
+
 div#header {
     height: 100px;
     width: 70%;
@@ -139,6 +156,7 @@ div#hero-image-block {
     justify-content: center;
     z-index: 4;
     left: 50px;
+    cursor: pointer;
 }
 
 div#hero-ground-block {
