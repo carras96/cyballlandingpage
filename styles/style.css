@@ -734,6 +734,15 @@ img.social-media-button {
     }
 
     video#light1 {
+        top: -30%;
+    }
+
+    #light3 {
+        position: absolute;
+        transform: rotate(90deg);
+        width: 100%;
+        height: 130%;
         top: 0;
+        right: 30%;
     }
 }
