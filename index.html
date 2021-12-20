@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./styles/menu-mobile.css">
     <link rel="stylesheet" href="./styles/animation.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//sgwidget.leaderapps.co/js/sendgrid-widget.js"></script>
     <title>Document</title>
 </head>
 
@@ -177,13 +178,27 @@
                 <h3 class="header-section">Join our newsletter and socials!</h3>
                 <div id="form-email">
                     <div id="form-email-wrapper">
-                        <div id="input-form">
+                        <!-- <div id="input-form">
                             <input type="email" placeholder="Enter your email">
                             <span>Subcribe</span>
+                        </div> -->
+                        <div id="sendgrid-subscription-widget" class="input-form">
+                            <form id="sg-widget" data-token="f47bbbc05bebd32495ad143b57bd708e" onsubmit="return false;" class="form">
+                                <div id="email" >
+                                    <input type="email" maxlength="256" name="email" data-name="Email" placeholder="Enter your email"
+                                    required class="text-field w-input">
+                                </div>
+                                <input id="sg-submit-btn" type="submit" value="Subscribe" data-wait="Please wait..."
+                                    class="submit_btn_lea w-button">
+                            </form>
                         </div>
                         <div id="form-image">
                             <img src="./vendors/images/bsc.png" alt="">
                             <img src="./vendors/images/solana.png" alt="">
+                        </div>
+                        <div id="form-image-mobile">
+                            <img src="./vendors/images/BSC-mobile.png" alt="">
+                            <img src="./vendors/images/solana-mobile.png" alt="">
                         </div>
                     </div>
                 </div>

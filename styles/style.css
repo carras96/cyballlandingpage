@@ -240,6 +240,11 @@ div#banner:before {
     width: 85%;
 }
 
+#Features .detail p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
 #Features .detail {
     align-self: center;
     color: white;
@@ -367,7 +372,19 @@ div#form-image {
     justify-content: center;
 }
 
-div#input-form {
+div#form-image-mobile img {
+    width: auto;
+}
+
+div#form-image-mobile {
+    display: none;
+}
+
+div.input-form {
+    
+}
+
+#sg-widget {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -399,7 +416,19 @@ div#form-email:after {
     bottom: 50px;
 }
 
-div#input-form span {
+div#form-image-mobile:after {
+    content: '';
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-image: url("../vendors/images/corner.png");
+    background-repeat: no-repeat;
+    right: 50px;
+    bottom: -50px;
+    display: none;
+}
+
+div.input-form #sg-submit-btn {
     display: inline-block;
     background-position: center;
     background: linear-gradient(96.68deg, rgba(213, 46, 251, 0.8) 25.88%, rgba(21, 14, 52, 0) 96.15%);
@@ -411,6 +440,10 @@ div#input-form span {
     justify-content: center;
     font-weight: bold;
     font-size: 22px;
+    outline: none;
+    border: none;
+    color: white;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 3% 100%, 0 90%);
 }
 
 div#form-email-wrapper {
@@ -423,7 +456,7 @@ div#form-email-wrapper {
     margin-right: 20px;
 }
 
-div#input-form input {
+div.input-form #email {
     height: 40px;
     width: calc(100% - 140px - 185px);
     padding: 20px 40px;
@@ -431,14 +464,24 @@ div#input-form input {
     opacity: 0.95;
     box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(40px);
+}
+
+div.input-form #email input {
     border: none;
     outline: none;
     color: white;
     font-size: 20px;
     font-weight: 500;
+    background: linear-gradient(
+98.8deg, rgba(4, 1, 18, 0.8) 7.77%, rgba(21, 14, 52, 0) 88.45%);
+    opacity: 0.95;
+    box-shadow: 0px 4px 24px rgb(0 0 0 / 25%);
+    backdrop-filter: blur(40px);
+    height: 40px;
+    margin-left: 30px;
 }
 
-div#input-form input::placeholder {
+div.input-form #email input::placeholder {
     color: white;
     font-size: 20px;
     font-weight: 500;
@@ -460,6 +503,13 @@ div#Community img {
 
 #CyBloc .detail h4 {
     margin-top: 20px;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+#CyBloc .detail p {
+    font-weight: 500;
+    font-size: 20px;
 }
 
 div#footer {
@@ -504,6 +554,14 @@ img.social-media-button {
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 15px;
+}
+
+#Community .header-section {
+    color: #FCE51D;
+}
+
+div#form-image img {
+    margin: 0px 25px;
 }
 
 @media screen and (max-width: 1500px) {
@@ -585,26 +643,32 @@ img.social-media-button {
 
     div#form-email {
         height: 450px;
-        background-image: unset;
-        background-color: rgba(31,25,48, 0.5);
+        /* background-image: unset; */
+        /* background-color: rgba(31,25,48, 0.5); */
         width: 80%;
         padding: 30px;
+        background-image: url(../vendors/images/card-mobile.png);
     }
 
-    div#input-form input {
+    div.input-form #email {
         width: 80%;
-        padding-left: 30px;
-        padding-right: 30px;
         margin-bottom: 25px;
+        height: 40px;
+        padding: 10px 0;
     }
     
-    div#input-form span {
+    div.input-form #sg-submit-btn {
         width: 80%;
         padding-left: 30px;
         padding-right: 30px;
+        height: 40px;
     }
     
-    div#input-form {
+    div.input-form {
+        
+    }
+
+    #sg-widget {
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -615,13 +679,26 @@ img.social-media-button {
         margin: 0;
     }
 
+    div#form-image-mobile {
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
     div#form-image {
-        margin-top: 30px;
+        display: none;
     }
 
     div#form-email:after {
-        right: 10px;
-        bottom: 10px;
+        display: none;
+    }
+
+    div#form-image-mobile:after {
+        display: block;
+        right: 50px;
+        bottom: -50px;
     }
 }
 
@@ -744,5 +821,48 @@ img.social-media-button {
         height: 130%;
         top: 0;
         right: 30%;
+    }
+
+    #CyBloc .detail h4 {
+        font-size: 22px;
+    }
+    
+    #CyBloc .detail p {
+        font-size: 16px;
+    }
+
+    #Features .detail p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    div.input-form #email input::placeholder {
+        color: white;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    div.input-form #email {
+        padding: 5px 0;
+        margin-bottom: 15px;
+    }
+
+    div#form-image-mobile img {
+        width: 12%;
+        margin: 0 15px;
+    }
+
+    div#form-image-mobile:after {
+        right: 0px;
+        bottom: -30px;
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    div#form-image-mobile:after {
+        right: 0px;
+        bottom: 0;
     }
 }
