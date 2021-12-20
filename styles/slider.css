@@ -153,5 +153,19 @@ http://stackoverflow.com/a/34696029/383904
 
 .CSSgal .slider img {
     aspect-ratio: auto;
-    width: 100%;
+    width: 90%;
+}
+
+@media screen and (max-width: 1000px) {
+	.CSSgal .prevNext a {
+		width: 40px;
+		height: 40px;
+	}
+}
+
+@media screen and (max-width: 7670px) {
+	.CSSgal .prevNext a {
+		width: 30px;
+		height: 30px;
+	}
 }

@@ -189,13 +189,14 @@ img#hero-image {
 div#banner:before {
     content: '';
     position: absolute;
-    width: 100%;
+    width: 90%;
     height: 100%;
     background-position: center;
     background-image: url("../vendors/images/frame-banner.png");
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 3;
+    left: 5%;
 }
 
 #CyBloc .content {
@@ -857,6 +858,10 @@ div#form-image img {
         bottom: -30px;
         width: 35px;
         height: 35px;
+    }
+
+    .header-section {
+        margin-bottom: 30px;
     }
 }
 
